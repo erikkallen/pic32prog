@@ -25,7 +25,7 @@ sources = [
 ]
 
 
-dep_libusb =  dependency('libusb-1.0')
-dep_hidapi =  dependency(hidapi)
+dep_libusb =  dependency('libusb-1.0', static: true)
+dep_hidapi =  dependency(hidapi, static: true)
 
 executable('pic32prog', sources, dependencies : [dep_libusb, dep_hidapi])
